@@ -1,0 +1,25 @@
+Algoritmo armstrong
+	Definir contadorCifras, sumaCifras Como Entero
+	Definir num, copiaNumero, cifra Como Real
+	Imprimir "Escriba el número a analizar: "
+	Leer num
+	contadorCifras = 0
+	copiaNumero = num
+	Mientras copiaNumero > 0
+		cifra = copiaNumero % 10
+		copiaNumero = trunc(copiaNumero / 10)
+		contadorCifras = contadorCifras + 1
+	FinMientras
+	sumaCifras = 0
+	copiaNumero = num
+	Mientras copiaNumero > 0
+		cifra = copiaNumero % 10
+		copiaNumero = trunc(copiaNumero / 10)
+		sumaCifras = sumaCifras + cifra ^ contadorCifras
+	FinMientras
+	Si num = sumaCifras Entonces
+		Imprimir num, " es un número de Armstrong."
+	SiNo
+		Imprimir num, " no es un número de Armstrong."
+	FinSi
+FinAlgoritmo

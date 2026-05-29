@@ -1,0 +1,31 @@
+Algoritmo android
+	Definir voto Como Cadena
+	Definir androi, ios Como Entero
+	Repetir
+		Imprimir "Votar por android?:"
+		leer voto
+		Si voto == "Si" o voto == "si" Entonces
+			androi = androi + 1
+			Imprimir "Se ha seleccionado: Android"
+		sino 
+			Imprimir "Votar por IOS?:"
+			Leer voto
+			Si voto == "Si" o voto == "si" Entonces
+				ios = ios + 1
+				Imprimir "Se ha seleccionado: IOS"
+			SiNo
+				Imprimir "Voto no valido"
+			FinSi
+		FinSi
+		Imprimir "añadir mas votos?:"
+		Leer voto
+	Hasta Que voto <> "SI" y voto <> "Si" y voto <> "si"
+	Si androi > ios Entonces
+		Imprimir "Android es ganador de la votación"
+	sino si ios > androi entonces
+			Imprimir "IOS es ganador de la votación"
+		SiNo
+			Imprimir "Empate en la votación"
+		FinSi
+	FinSi
+FinAlgoritmo

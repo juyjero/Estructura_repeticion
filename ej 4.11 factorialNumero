@@ -1,0 +1,16 @@
+Algoritmo factorialNumero
+	Definir num, factorial, inferiores Como Entero
+	Imprimir( "Ingrese el número para el factorial: " )
+	leer num
+	Si( num < 0 ) Entonces
+		Imprimir( "No se puede calcular el factorial" )
+	SiNo
+		factorial = 1
+		inferiores = 1
+		Repetir
+			factorial = factorial * inferiores
+			inferiores = inferiores + 1
+		Mientras Que( inferiores <= num )
+		Imprimir "Factorial de ", num, " es: ", factorial
+	FinSi
+FinAlgoritmo

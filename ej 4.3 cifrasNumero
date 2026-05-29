@@ -1,0 +1,22 @@
+Algoritmo cifrasNumero
+	Definir num, contadorCifras Como Entero
+	Definir cifra, sumaCifras, copiaNumero Como Entero
+	Imprimir "Escriba un número entero:"
+	Leer num
+	Si num > 0 Entonces
+		copiaNumero = num
+		contadorCifras = 0
+		sumaCifras = 0
+		Mientras copiaNumero > 0
+			cifra = copiaNumero mod 10
+			copiaNumero = trunc(copiaNumero / 10)
+			sumaCifras = cifra + sumaCifras
+			contadorCifras = contadorCifras + 1
+		FinMientras
+		Imprimir "La cantidad de cifras de: ", num
+		Imprimir "son: ", contadorCifras
+		Imprimir "La sumatoria es: ", sumaCifras
+	SiNo
+		Imprimir "No es un número positivo"
+	FinSi
+FinAlgoritmo

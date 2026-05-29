@@ -1,0 +1,45 @@
+Algoritmo juegoTablas
+	Definir tabla, contadorFilas, producto, respuesta, aciertos, desaciertos Como Entero
+	Definir seguir Como Caracter
+	seguir = 'S'
+	Mientras seguir == 'S' O seguir == 's'
+		Imprimir "Con cuál tabla desea jugar?: "
+		Repetir
+			leer tabla
+		Mientras Que tabla < 1 O tabla > 20
+		aciertos = 0
+		desaciertos = 0
+		Para contadorFilas = 1 Hasta 10 Con Paso 1
+			producto = tabla * contadorFilas
+			imprimir "Escriba el resultado de ", tabla, " x ", contadorFilas
+			leer respuesta
+			Si respuesta == producto Entonces
+				Imprimir "Felicitaciones"
+				aciertos = aciertos + 1
+			SiNo
+				Imprimir "Lo siento, ese no es el resultado"
+				Imprimir "La respuesta correcta es: ", producto
+				desaciertos = desaciertos + 1
+			FinSi
+		FinPara
+		Imprimir "Aciertos: ", aciertos
+		Imprimir "Desaciertos: ", desaciertos
+		Si aciertos <= 5
+			Imprimir "Insuficiente"
+		SiNo
+			Si aciertos <= 7
+				Imprimir "Aceptable"
+			SiNo
+				Si aciertos <= 9
+					Imprimir "Sobresaliente"
+				SiNo
+					Imprimir "Excelente"
+				FinSi
+			FinSi
+		FinSi
+		imprimir "¿Desea volver a jugar [S] o [N]?: "
+		Repetir
+		leer seguir
+		Mientras Que seguir <> 'S' Y seguir <> 'N' Y seguir <> 's' Y seguir <> 'n'
+	FinMientras
+FinAlgoritmo
